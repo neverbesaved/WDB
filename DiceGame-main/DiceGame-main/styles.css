@@ -1,0 +1,28 @@
+body {
+  background-color: #a0d2db;
+}
+.container {
+  text-align: center;
+  margin: auto;
+}
+.dice {
+  text-align: center;
+  display: inline-block;
+}
+h1 {
+  font-family: "Londrina Solid", cursive;
+  font-weight: 900;
+  font-size: 7rem;
+  color: #001524;
+}
+p {
+  font-size: 3rem;
+  font-family: "Londrina Solid", cursive;
+  color: #001524;
+}
+img {
+  width: 85%;
+}
+footer {
+  text-align: center;
+}

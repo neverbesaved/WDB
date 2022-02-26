@@ -1,0 +1,136 @@
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat-Bold";
+}
+p {
+  color: #8f8f8f;
+}
+/* Title Section */
+#title .container-fluid {
+  padding: 3% 15% 7%;
+  text-align: left;
+}
+/* Headings */
+.big-heading {
+  font-family: "Montserrat-Black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.container-fluid {
+  padding: 7% 15%;
+}
+.navbar {
+  padding: 0 0 4.5rem 0;
+}
+.navbar-brand {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Ubuntu";
+}
+.nav-item {
+  padding: 0 18px;
+}
+.iphone-image {
+  transform: rotate(25deg);
+  width: 60%;
+  position: absolute;
+  right: 30%;
+}
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light";
+}
+.download-button {
+  margin: 5% 3% 5% 0%;
+}
+/* Features Section */
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.feature {
+  padding: 10% 5% 5% 5%;
+}
+.feature-icons {
+  padding-bottom: 4%;
+  color: #ef8172;
+}
+.feature-icons:hover {
+  color: #ff4c68;
+}
+/* Testimonials Section */
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+#testimonials {
+  background-color: #ef8172;
+}
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+.press-image {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+/* Pricing Section */
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+#pricing {
+  padding: 100px;
+}
+.pricing-column {
+  padding: 3% 2%;
+}
+#features {
+  position: relative;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1028px) {
+  .iphone-image {
+    transform: rotate(0);
+    width: 60%;
+    position: static;
+    right: 30%;
+  }
+  #title {
+    text-align: center;
+  }
+}
+.icons {
+  margin: 60px 12px 10px;
+}
+/* Sections  */
+.white-section {
+  background-color: #fff;
+}
+.colored-section {
+  background-color: #ff4c68;
+  color: white;
+}
