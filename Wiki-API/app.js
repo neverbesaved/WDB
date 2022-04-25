@@ -61,7 +61,8 @@ app
     });
   });
 
-app.route("/articles/:articleTitle")
+app
+  .route("/articles/:articleTitle")
   .get((req, res) => {
     Article.findOne({ title: req.params.articleTitle }, (err, foundArticle) => {
       if (!err) {
@@ -76,28 +77,37 @@ app.route("/articles/:articleTitle")
       { title: req.params.articleTitle },
       { title: req.body.title, content: req.body.content },
 
-    (err) => {
+      (err) => {
         if (!err) {
           res.send("Successfully updated article.");
         } else {
-            res.send(err)
+          res.send(err);
         }
       }
     );
   })
-  .patch((req,res) => { 
+  .patch((req, res) => {
     Article.updateOne(
-        {title: req.params.articleTitle},
-        {$set: req.body},
-      function(err) {
+      { title: req.params.articleTitle },
+      { $set: req.body },
+      function (err) {
         if (!err) {
-            res.send("Succsesfully updated an article")
+          res.send("Succsesfully updated an article");
         } else {
-          res.send("err" + err)
+          res.send("err" + err);
         }
       }
-    )
+    );
   })
+  .delete((req, res) => {
+    Article.deleteOne({ title: req.params.articleTitle }, (err) => {
+      if (!err) {
+        res.send("Successfully deleted selected article");
+      } else {
+        res.send(err);
+      }
+    });
+  });
 
 app.listen(3000, () => {
   console.log("Server started on port 3000");
