@@ -61,8 +61,7 @@ app
     });
   });
 
-app
-  .route("/articles/:articleTitle")
+app.route("/articles/:articleTitle")
   .get((req, res) => {
     Article.findOne({ title: req.params.articleTitle }, (err, foundArticle) => {
       if (!err) {
@@ -85,7 +84,20 @@ app
         }
       }
     );
-  });
+  })
+  .patch((req,res) => { 
+    Article.updateOne(
+        {title: req.params.articleTitle},
+        {$set: req.body},
+      function(err) {
+        if (!err) {
+            res.send("Succsesfully updated an article")
+        } else {
+          res.send("err" + err)
+        }
+      }
+    )
+  })
 
 app.listen(3000, () => {
   console.log("Server started on port 3000");
